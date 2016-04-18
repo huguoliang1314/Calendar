@@ -1,0 +1,53 @@
+.carouse-slides {
+    height: 367px;
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: gray;
+    position: relative;
+}
+
+.button {
+    height: 20px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+.button .prev {
+    position: absolute;
+    left: 0;
+}
+
+.button .next {
+    position: absolute;
+    right: 0;
+}
+
+.slides-paper {
+    position: absolute;
+    top: 367px;
+
+    opacity: 0;
+    transform: scale(0);
+    transition: ls;
+}
+
+.current {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 1;
+    transform: scale(1);
+    transition: ls;
+}
+
+.current img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 100%;
+    height: auto;
+
+}

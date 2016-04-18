@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="../JavaScript/bootstrap-select/dist/css/bootstrap-select.min.css">-->
+    <!--<link rel="stylesheet" href="../JavaScript">-->
+    <!--<script src="../JavaScript/jquery/dist/jquery.min.js"></script>-->
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <script src="../JavaScript/jquery/dist/jquery.min.js"></script>
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+
+    <script src="../JavaScript/bootstrap-select/js/bootstrap-select.js"></script>
+
+
+</head>
+<body>
+<div class="main">
+    <select class="selectpicker">
+        <option value="0">Mustard</option>
+        <option value="1">Ketchup</option>
+        <option value="2">Relish</option>
+    </select>
+</div>
+
+
+<script type="text/javascript">
+    $('.selectpicker').selectpicker({
+        style: 'btn-info',
+        size: 4
+    });
+
+    $('.selectpicker').change(function () {
+        if ($(this).find('option:selected').attr("value") == '2') {
+            $('.main').append('<input type="text" class="tttt">' + '</input>');
+            $('.selectpicker').selectpicker('refresh');
+        } else {
+            if ($('.tttt') != "undified") {
+                //$('.main').remove('<input type="text" class="tttt">' + '</input>');
+                $('.tttt').remove();
+            }
+        }
+
+    });
+
+</script>
+</body>
+</html>
